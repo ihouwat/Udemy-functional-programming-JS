@@ -43,7 +43,7 @@ var updateTries = function(user) {
 let usr = getUser(users, "Henry");
 let usr1 = updateScore(usr, 30);
 let usr2 = updateTries(usr1);
-//storeUser(usr2);
+//storeUser(usr2); // users array will be updated even if we comment out this storeUser line
 
 
 

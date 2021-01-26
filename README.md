@@ -1,2 +1,2 @@
 # Udemy-functional-programming-JS
-Material from Functional Programming in JavaScript: A Practical Guide course on Udemy
+Material from Udemy course, [Functional Programming in JavaScript: A Practical Guide course](https://www.udemy.com/course/functional-programming-in-javascript-a-practical-guide/) by Steven Hancock(https://www.udemy.com/user/stevenhancock/).
