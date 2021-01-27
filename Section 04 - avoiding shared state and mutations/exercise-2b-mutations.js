@@ -28,6 +28,4 @@ var newTries = function(arr, name) {
 
 
 var newArray1 = newScore(cloneObj(users), "James", 30);
-var newArray2 = newTries(cloneObj(users), "James");
-
-
+var newArray2 = newTries(cloneObj(newArray1), "James");
