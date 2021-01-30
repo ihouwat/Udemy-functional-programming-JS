@@ -15,16 +15,15 @@ const storeUser = (arr, user) => {
     return R.update(index, user, arr);
 };
 
-// Accepts an array of user objects, arr, and a string, name
-// returns the user object or null if no user is found
-const findUser = (arr, name) => R.find(R.propEq('name', name))(arr) || null;
+// Accepts an array of user objects and a string
+// looks for an object where user.name equals the string argfument
+// returns a cloned user object if found or null if no user is found
+const findUser = (arr, name) => R.clone(R.find(R.propEq('name', name))(arr)) || null;
 
 // Curry function to get a user from the 'users' array. Function call expects a string Ex: curriedGetUser("Henry");
-const getUser = R.clone(
-    R.curry(findUser)(users)
-);
+const getUser = R.curry(findUser)(users);
 
-var updateScore = (user, newAmt)  => {
+const updateScore = (user, newAmt)  => {
     if (user) {
         let clonedUser = R.clone(user);
         clonedUser.score += newAmt;
@@ -32,7 +31,7 @@ var updateScore = (user, newAmt)  => {
     }
 };
 
-var updateTries = function(user) {
+const updateTries = function(user) {
     if (user) {
         let clonedUser = R.clone(user);
         clonedUser.tries++;
@@ -52,6 +51,7 @@ updateTries,
 R.curry(storeUser)(users));
         
 console.log(updateHenry(32));
+console.log(users);
 
 console.log("End exercise-9-ramda.js");
        
