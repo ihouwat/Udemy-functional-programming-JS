@@ -78,7 +78,6 @@ var updateTries = function(user) {
     }
 };
 
-var printStats = (user) => [user.score, user.tries];
 
 // const usr = getUser(users, "Henry");
 // const usr1 = updateScore(cloneObj(usr), 30);
